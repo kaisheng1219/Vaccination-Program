@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1080.0" style="-fx-background-color: #a9d7f6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane fx:id="contentArea" layoutX="2.0" layoutY="3.0" prefHeight="420.0" prefWidth="633.0" style="-fx-border-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #3f37c9 #3f37c9;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="100.0" prefWidth="279.0" style="-fx-background-color: #a9d7f6#a9d7f6; -fx-border-color: black;">
+               <children>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="47.0" prefHeight="43.0" prefWidth="268.0" text="MySuperSejahtera">
+                     <font>
+                        <Font name="Arial Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="38.0" fitWidth="41.0" layoutX="131.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label fx:id="lblVCName" alignment="CENTER" prefHeight="132.0" prefWidth="803.0" style="-fx-border-color: #3f37c9 #3f37c9;" text="Vaccine Centre Name" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="406.0" prefWidth="278.0" style="-fx-background-color: #a9d7f6#a9d7f6; -fx-border-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Separator prefWidth="200.0" style="-fx-border-color: #a9d7f6#a9d7f6 #a9d7f6#a9d7f6;" />
+            <Button fx:id="btnViewRecipients" alignment="CENTER" mnemonicParsing="false" onAction="#viewRecipients" prefHeight="62.0" prefWidth="315.0" style="-fx-border-color: black; -fx-background-color: #a9d7f6;" stylesheets="@style.css" text="View Recipients">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Button>
+            <Separator prefWidth="200.0" style="-fx-border-color: #a9d7f6#a9d7f6 #a9d7f6#a9d7f6;" />
+            <Button fx:id="btnSetAppointment" alignment="CENTER" cancelButton="true" mnemonicParsing="false" onAction="#setAppointmentDate" prefHeight="62.0" prefWidth="325.0" style="-fx-border-color: black; -fx-background-color: #a9d7f6;" stylesheets="@style.css" text="Set Appointment Date">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Button>
+            <Separator prefHeight="0.0" prefWidth="276.0" style="-fx-border-color: #a9d7f6;" />
+            <Button fx:id="btnViewStats" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#viewStatistics" prefHeight="63.0" prefWidth="276.0" style="-fx-border-color: black; -fx-background-color: #a9d7f6;" stylesheets="@style.css" text="View Statistics">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Button>
+            <Separator prefWidth="200.0" style="-fx-border-color: #a9d7f6;" />
+            <Button fx:id="btnLogOut" alignment="CENTER" mnemonicParsing="false" onAction="#logOut" prefHeight="54.0" prefWidth="337.0" style="-fx-border-color: black; -fx-background-color: #a9d7f6;" stylesheets="@style.css" text="Log Out">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Button>
+            <Separator prefWidth="200.0" style="-fx-border-color: #a9d7f6;" />
+            <Button fx:id="btnRefresh" alignment="CENTER" mnemonicParsing="false" onAction="#refresh" style="-fx-border-color: black; -fx-background-color: lightgreen;" stylesheets="@style.css" text="Refresh">
+               <VBox.margin>
+                  <Insets left="93.0" top="50.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Button>
+            <ProgressIndicator fx:id="piRefresh" prefHeight="28.0" prefWidth="44.0" visible="false">
+               <VBox.margin>
+                  <Insets left="95.0" top="15.0" />
+               </VBox.margin>
+            </ProgressIndicator>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

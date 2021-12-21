@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="834.0" style="-fx-background-color: #fffce7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewStatisticsController">
+   <children>
+      <HBox layoutX="2.0" prefHeight="68.0" prefWidth="834.0" AnchorPane.bottomAnchor="492.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="BOTTOM_CENTER" prefHeight="144.0" prefWidth="834.0" text="Statistics" underline="true">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label alignment="CENTER_RIGHT" layoutX="106.0" layoutY="359.0" prefHeight="42.0" prefWidth="284.0" text="Total Doses Given on Day :">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dpForTotalByDay" layoutX="406.0" layoutY="365.0" prefHeight="26.0" prefWidth="159.0" style="-fx-border-color: black;" />
+      <Label alignment="CENTER_RIGHT" layoutX="92.0" layoutY="421.0" prefHeight="42.0" prefWidth="299.0" text="Total Doses Given in Month :">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnTotalByDay" layoutX="581.0" layoutY="366.0" mnemonicParsing="false" onAction="#viewTotalVaxByDay" style="-fx-border-color: black;" text="View">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnTotalByMonth" layoutX="581.0" layoutY="428.0" mnemonicParsing="false" onAction="#viewTotalVaxByMonth" style="-fx-border-color: black;" text="View">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></Button>
+      <ChoiceBox fx:id="cbMonths" layoutX="406.0" layoutY="428.0" prefHeight="26.0" prefWidth="159.0" style="-fx-border-color: black;" />
+      <AnchorPane layoutX="107.0" layoutY="86.0" prefHeight="110.0" prefWidth="260.0" style="-fx-background-color: lavender;" AnchorPane.leftAnchor="115.0">
+         <children>
+            <Label alignment="CENTER" layoutX="-8.0" layoutY="50.0" prefHeight="42.0" prefWidth="220.0" text="Total Vaccines Distributed" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotalGivenToVCs" alignment="BOTTOM_CENTER" layoutX="81.0" layoutY="13.0" prefHeight="48.0" prefWidth="134.0" text="30" textFill="RED" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="426.0" layoutY="86.0" prefHeight="110.0" prefWidth="260.0" style="-fx-background-color: pink;" AnchorPane.rightAnchor="115.0">
+         <children>
+            <Label alignment="CENTER" layoutX="-8.0" layoutY="50.0" prefHeight="42.0" prefWidth="220.0" text="Total Vaccination" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotalVax" alignment="BOTTOM_CENTER" layoutX="81.0" layoutY="13.0" prefHeight="48.0" prefWidth="134.0" text="30" textFill="RED" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="124.0" layoutY="214.0" prefHeight="110.0" prefWidth="260.0" style="-fx-background-color: lightcyan;" AnchorPane.leftAnchor="115.0">
+         <children>
+            <Label alignment="CENTER" layoutX="89.0" layoutY="51.0" prefHeight="42.0" prefWidth="231.0" text="Amount of Vaccines Left" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNoOfVaccinesLeft" alignment="BOTTOM_CENTER" layoutX="201.0" layoutY="12.0" prefHeight="48.0" prefWidth="114.0" text="30" textFill="RED" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="391.0" layoutY="214.0" prefHeight="110.0" prefWidth="260.0" style="-fx-background-color: aquamarine;" AnchorPane.rightAnchor="115.0">
+         <children>
+            <Label alignment="CENTER" layoutX="89.0" layoutY="51.0" prefHeight="42.0" prefWidth="231.0" text="Fully Vaccinated" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblFullyVaxed" alignment="BOTTOM_CENTER" layoutX="201.0" layoutY="12.0" prefHeight="48.0" prefWidth="114.0" text="30%" textFill="RED" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

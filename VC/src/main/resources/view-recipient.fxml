@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="810.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/16"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewRecipientController">
+   <children>
+      <TableView fx:id="tbViewRecipients" layoutX="192.0" layoutY="77.0" prefHeight="600.0" prefWidth="788.0" style="-fx-border-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columns>
+            <TableColumn fx:id="colName" editable="false" prefWidth="116.0" style="-fx-alignment: CENTER; -fx-font-family: Arial;" text="Name" />
+            <TableColumn fx:id="colPhone" editable="false" prefWidth="124.0" resizable="false" style="-fx-alignment: CENTER; -fx-font-family: Arial;" text="Phone" />
+            <TableColumn fx:id="colAge" editable="false" prefWidth="50.0" resizable="false" style="-fx-alignment: CENTER; -fx-font-family: Arial;" text="Age"/>
+            <TableColumn fx:id="colStatus" editable="false" prefWidth="167.0" resizable="false" style="-fx-alignment: CENTER; -fx-font-family: Arial;" text="Status" />
+            <TableColumn fx:id="colFirstDoseAppointment" editable="false" prefWidth="135.0" resizable="false" style="-fx-alignment: CENTER; -fx-font-family: Arial;" text="First Appointment" />
+            <TableColumn fx:id="colSecondDoseAppointment" editable="false" prefWidth="160.0" resizable="false" style="-fx-alignment: CENTER; -fx-font-family: Arial;" text="Second Appointment" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

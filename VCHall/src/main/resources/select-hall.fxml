@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SelectHallController">
+    <children>
+        <ImageView fitHeight="700.0" fitWidth="1080.0" opacity="0.41" pickOnBounds="true">
+            <image>
+                <Image url="@images/home-bg.jpg" />
+            </image>
+            <effect>
+                <BoxBlur />
+            </effect>
+        </ImageView>
+        <ChoiceBox fx:id="cbVCs" layoutX="568.0" layoutY="305.0" prefHeight="42.0" prefWidth="178.0" style="-fx-border-color: black;" />
+        <HBox layoutX="114.0" layoutY="64.0" prefHeight="192.0" prefWidth="1080.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="287.0" prefWidth="1116.0" text="Vaccination Center Hall Simulator">
+                    <font>
+                        <Font name="Arial Black" size="40.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <Label layoutX="232.0" layoutY="293.0" prefHeight="67.0" prefWidth="330.0" text="Please Select a VC:">
+            <font>
+                <Font name="Arial Black" size="30.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="btnGo" layoutX="768.0" layoutY="304.0" mnemonicParsing="false" onAction="#go" style="-fx-border-color: black;" text="Go">
+            <font>
+                <Font name="Arial Black" size="20.0" />
+            </font>
+        </Button>
+      <ProgressIndicator fx:id="piLoading" layoutX="850.0" layoutY="312.0" prefHeight="30.0" prefWidth="39.0" visible="false" />
+    </children>
+</AnchorPane>
